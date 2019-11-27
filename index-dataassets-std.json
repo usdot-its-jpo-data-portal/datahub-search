@@ -113,7 +113,8 @@
         "index": false
       },
       "dhId": {
-        "type": "text"
+        "type": "text",
+        "analyzer": "lowercase_keyword"
       },
       "dhLastUpdate": {
         "type": "date",

@@ -16,7 +16,6 @@ STATUS=$(curl -so /dev/null -w '%{response_code}' $HOST/$INDEX)
 [ "$STATUS" -ne 200 ] || die "Index already exists"
 
 
-#Create Index: Projects
 echo 'Created index: '$INDEX
 curl -s -XPUT $HOST/$INDEX/ -H "Content-Type: application/json" -d @index-dataassets-std.json
 echo
