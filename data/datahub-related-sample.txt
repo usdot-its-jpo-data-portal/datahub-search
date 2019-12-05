@@ -1,0 +1,16 @@
+{"index":{"_index":"related","_id":"dtg-dusd-cr84"} }
+{"id":"dtg-dusd-cr84","name":"Cooperative Automated Research Mobility Applications (CARMA) 2","urls":[{"name":"CARMAPlatform", "url":"","id":"585e203c4bf7b9ff12966fd9697b87cb"}]}
+{"index":{"_index":"related","_id":"dtg-xn7c-yu2n"} }
+{"id":"dtg-xn7c-yu2n","name":"Tampa CV Pilot Signal Phasing and Timing (SPaT) Sample","urls":[{"name":"MMITSS_THEA", "url":"","id":"7f3bac27fc81d39ffa8ede58b39c8fb6"}]}
+{"index":{"_index":"related","_id":"dtg-in46-gmir"} }
+{"id":"dtg-in46-gmir","name":"Tampa CV Pilot Traveler Information Message (TIM) Sample","urls":[{"name":"MMITSS_THEA", "url":"","id":"7f3bac27fc81d39ffa8ede58b39c8fb6"}]}
+{"index":{"_index":"related","_id":"dtg-nm7w-nvbm"} }
+{"id":"dtg-nm7w-nvbm","name":"Tampa CV Pilot Basic Safety Message (BSM) Sample ","urls":[{"name":"MMITSS_THEA", "url":"","id":"7f3bac27fc81d39ffa8ede58b39c8fb6"}]}
+{"index":{"_index":"related","_id":"dtg-xn7c-yu2n"} }
+{"id":"dtg-xn7c-yu2n","name":"Tampa CV Pilot Signal Phasing and Timing (SPaT) Sample","urls":[{"name":"sandbox", "url":"","id":"9413d148e332d794b70a861676d56eb3"}]}
+{"index":{"_index":"related","_id":"dtg-in46-gmir"} }
+{"id":"dtg-in46-gmir","name":"Tampa CV Pilot Traveler Information Message (TIM) Sample","urls":[{"name":"sandbox", "url":"","id":"9413d148e332d794b70a861676d56eb3"}]}
+{"index":{"_index":"related","_id":"dtg-nm7w-nvbm"} }
+{"id":"dtg-nm7w-nvbm","name":"Tampa CV Pilot Basic Safety Message (BSM) Sample ","urls":[{"name":"sandbox", "url":"","id":"9413d148e332d794b70a861676d56eb3"}]}
+{"index":{"_index":"related","_id":"scgc-69qe-yiui"} }
+{"id":"scgc-69qe-yiui","name":"Work-Zone-Data-Exchange-WZDx-Feed-Registry","urls":[{"name":"jpo-wzdx", "url":"","id":"8ec1052923abb6bb7c06976431190903"}]}
