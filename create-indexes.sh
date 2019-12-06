@@ -4,19 +4,20 @@ die() {
   exit 1
 }
 
-[ "$#" -eq 2 ] || die "2 arguments required, $# provided. Required arguments: INDEX HOST"
+[ "$#" -eq 3 ] || die "3 arguments required, $# provided. Required arguments: HOST, INDEX and INDEXFILE"
 
-INDEX=$1
-HOST=$2
+HOST=$1
+INDEX=$2
+INDEXFILE=$3
 
 STATUS=$(curl -so /dev/null -w '%{response_code}' $HOST)
 [ "$STATUS" -eq 200 ] || die "Host is not reachable."
 
 STATUS=$(curl -so /dev/null -w '%{response_code}' $HOST/$INDEX)
-[ "$STATUS" -ne 200 ] || die "Index already exists"
+[ "$STATUS" -ne 200 ] || die "Index [$INDEX] already exists"
 
-
-echo 'Created index: '$INDEX
-curl -s -XPUT $HOST/$INDEX/ -H "Content-Type: application/json" -d @index-dataassets-std.json
+echo 'Creating index: '$INDEX
+curl -s -XPUT $HOST"/"$INDEX -H "Content-Type: application/json" -d @$INDEXFILE
 echo
+
 echo 'end'
