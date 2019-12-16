@@ -14,11 +14,11 @@ if [ "$STATUS" -ne 200 ]; then
 fi
 
 echo 'Creating index: DataAssets'
-curl -s -XPUT $HOST/projects/ -H "Content-Type: application/json" -d @/schemas/dataassets-index.json
+curl -s -XPUT $HOST/dataassets/ -H "Content-Type: application/json" -d @/schemas/dataassets-index.json
 echo 'Done creating index: DataAssets'
 
 echo 'Creating index: Related'
-curl -s -XPUT $HOST/code/ -H "Content-Type: application/json" -d @/schemas/related-index.json
+curl -s -XPUT $HOST/related/ -H "Content-Type: application/json" -d @/schemas/related-index.json
 echo 'Done creating index: Related'
 
 echo 'Adding data to index: DataAssets'
