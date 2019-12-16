@@ -14,7 +14,7 @@ phases:
       - IMAGE_URI="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME"
   build:
     commands:
-      - npm install -g elasticdump
+      - npm install -g elasticdump@4.1.1
       - mkdir data
       - elasticdump --input=$DEPLOYED_ELASTICSEARCH_URL/dataassets --output=data/dataassets-data.json --type=data
       - elasticdump --input=$DEPLOYED_ELASTICSEARCH_URL/related --output=data/related-data.json --type=data
