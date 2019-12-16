@@ -15,7 +15,7 @@ phases:
   build:
     commands:
       - npm install -g elasticdump@4.1.1
-      - mkdir data
+      - mkdir -p data
       - elasticdump --input=$DEPLOYED_ELASTICSEARCH_URL/dataassets --output=data/dataassets-data.json --type=data
       - elasticdump --input=$DEPLOYED_ELASTICSEARCH_URL/related --output=data/related-data.json --type=data
       - docker build -t $IMAGE_URI:$IMAGE_TAG .
