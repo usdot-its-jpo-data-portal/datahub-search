@@ -123,6 +123,19 @@
       "dhSourceName": {
         "type": "text",
         "analyzer": "lowercase_keyword"
+      },
+      "metrics": {
+        "properties": {
+          "downloads_total": {
+            "type": "integer"
+          },
+          "page_views_last_month": {
+            "type": "integer"
+          },
+          "page_views_total": {
+            "type": "integer"
+          }
+        }
       }
     }
   }
