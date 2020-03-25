@@ -126,13 +126,13 @@
       },
       "metrics": {
         "properties": {
-          "downloads_total": {
+          "downloadsTotal": {
             "type": "integer"
           },
-          "page_views_last_month": {
+          "pageViewsLastMonth": {
             "type": "integer"
           },
-          "page_views_total": {
+          "pageViewsTotal": {
             "type": "integer"
           }
         }
