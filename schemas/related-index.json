@@ -21,17 +21,6 @@
             "dh_synonym_filter"
           ]
         },
-        "text_content_analyzer": {
-          "type": "custom",
-          "tokenizer": "standard",
-          "char_filter": "dh_char",
-          "filter": [
-            "lowercase",
-            "dh_synonym_filter",
-            "dh_stop",
-            "dh_snow"
-          ]
-        },
         "lowercase_keyword": {
           "type": "custom",
           "tokenizer": "keyword",
@@ -56,19 +45,12 @@
         "dh_stop": {
           "type": "stop",
           "stopwords": "_english_"
-        },
-        "dh_snow": {
-          "type": "snowball",
-          "language": "English"
         }
       },
       "char_filter": {
         "dh_char": {
           "type": "mapping",
-          "mappings": [
-            "++ => plusplus",
-            "# => sharp"
-          ]
+          "mappings": []
         }
       }
     },
@@ -82,47 +64,22 @@
         "type": "text"
       },
       "name": {
-        "type": "text",
-        "analyzer": "title_analyzer",
-        "fields": {
-          "substring": {
+        "type": "text"
+      },
+      "urls": {
+        "properties": {
+          "id": {
             "type": "text",
-            "analyzer": "title_ngram_analyzer",
-            "search_analyzer": "title_analyzer"
+            "index": false
+          },
+          "name": {
+            "type": "text"
+          },
+          "url": {
+            "type": "text",
+            "index": false
           }
         }
-      },
-      "description": {
-        "type": "text",
-        "analyzer": "text_content_analyzer"
-      },
-      "accessLevel": {
-        "type": "text",
-        "analyzer": "lowercase_keyword"
-      },
-      "lastUpdate": {
-        "type": "date",
-        "format": "strict_date_optional_time||epoch_millis"
-      },
-      "tags": {
-        "type": "text",
-        "analyzer": "title_analyzer"
-      },
-      "sourceUrl": {
-        "type": "text",
-        "index": false
-      },
-      "dhId": {
-        "type": "text",
-        "analyzer": "lowercase_keyword"
-      },
-      "dhLastUpdate": {
-        "type": "date",
-        "format": "strict_date_optional_time||epoch_millis"
-      },
-      "dhSourceName": {
-        "type": "text",
-        "analyzer": "lowercase_keyword"
       }
     }
   }
