@@ -136,6 +136,10 @@
             "type": "integer"
           }
         }
+      },
+      "dhProjects": {
+        "type": "text",
+        "index": false
       }
     }
   }
