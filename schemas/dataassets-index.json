@@ -140,6 +140,10 @@
       "dhProjects": {
         "type": "text",
         "index": false
+      },
+      "dhDataTypes": {
+        "type": "text",
+        "index": false
       }
     }
   }
