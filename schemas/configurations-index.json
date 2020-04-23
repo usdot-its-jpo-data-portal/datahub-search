@@ -96,6 +96,26 @@
             "index": false
           }
         }
+      },
+      "dataTypes": {
+        "properties": {
+          "id": {
+            "type": "text",
+            "index": false
+          },
+          "name": {
+            "type": "text"
+          },
+          "description": {
+            "type": "text"
+          },
+          "isEnabled": {
+            "type": "boolean"
+          },
+          "lastModified": {
+            "type": "date"
+          }
+        }
       }
     }
   }
