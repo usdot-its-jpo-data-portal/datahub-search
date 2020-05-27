@@ -144,6 +144,9 @@
       "dhDataTypes": {
         "type": "text",
         "index": false
+      },
+      "dhType": {
+        "type": "text"
       }
     }
   }
