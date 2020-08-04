@@ -1,0 +1,70 @@
+{
+  "mappings": {
+    "properties": {
+      "requestTimestamp": {
+        "type": "date"
+      },
+      "resource": {
+        "properties": {
+          "datasource": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "datatype": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "filename": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      },
+      "sourceIPAddress": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "type": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "creation_date": "1596130808746",
+      "number_of_shards": "5",
+      "number_of_replicas": "1",
+      "uuid": "7nKNVIn6RVm_FMTICOLj8g",
+      "version": {
+        "created": "7010199"
+      },
+      "provided_name": "sandbox-metrics"
+    }
+  }
+}
