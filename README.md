@@ -40,10 +40,16 @@ For installation of Elasticsearch refer to [Installing Elasticsearch](https://ww
 [Amazon Web Services (AWS)](https://aws.amazon.com/) offers Amazon Elasticsearch Service and could be a good alternative to host an Elasticsearch instance, see the instructions for the [developer guide](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide)
 
 ## File Manifest
-* create-indexes.sh : Creates a Index in an Elasticsearch instance.
-* index-dataassets-std.json : Elasticsearch index definition for the **data assets**.
+* create-indexes.sh : Creates an Index in an Elasticsearch instance.
+* schemas/dataassets-index.json : Elasticsearch index definition for the **data assets** index; holds metadata information on data assets.
+* schemas/configurations-index.json : Elasticsearch index definition for the **configurations** index; holds configuration information on ITS DataHub.
+* schemas/related-index.json : Elasticsearch index definition for the **related** index; holds linkage information on related source code assets from ITS CodeHub.
+* schemas/metrics-index.json : Elasticsearch index definition for the **metrics** index; holds usage metrics on ITS DataHub assets.
 * data/load_sample_data.sh : Loads data into an existing index in Elasticsearch.
-* data/datahub-dataassets-all-sample.txt : Contains sample data to be loaded into an Index.
+* data/datahub-dataassets-all-sample.txt : Contains sample data to be loaded into a data assets Index.
+* data/datahub-related-sample.txt : Contains sample data to be loaded into a related Index.
+* data/configurations-document.json : Contains sample data to be loaded into a configurations Index.
+* data/datahub-metrics-sample.txt : Contains sample data to be loaded into a metrics Index.
 
 
 
@@ -75,7 +81,7 @@ curl -X GET [http://elasticsearch-url:port]/_cat/indices?v
 
 
 ## Contact information
-Joe Doe : X@Y
+ITS CodeHub Support Team : data.itsjpo@dot.gov
 
 Distributed under XYZ license. See *LICENSE* for more information
 
@@ -94,7 +100,7 @@ Thank you to the Department of Transportation for funding to develop this projec
 
 ## CODE.GOV Registration Info
 * __Agency:__ DOT
-* __Short Description:__ Defines and creates the Index **dataassets** for ITS DataHub.
+* __Short Description:__ Defines and creates Elasticsearch indexes for ITS DataHub.
 * __Status:__ Beta
 * __Tags:__ transportation, connected vehicles, intelligent transportation systems, python, DMP, Sufficiency Checklist, Elasticsearch
 * __Labor Hours:__
