@@ -21,6 +21,10 @@ echo 'Creating index: Related'
 curl -s -XPUT $HOST/related/ -H "Content-Type: application/json" -d @/schemas/related-index.json
 echo 'Done creating index: Related'
 
+echo 'Creating index: Metrics'
+curl -s -XPUT $HOST/metrics/ -H "Content-Type: application/json" -d @/schemas/metrics-index.json
+echo 'Done creating index: Metrics'
+
 echo 'Adding data to index: DataAssets'
 elasticdump --input=/data/dataassets-data.json --output=$ELASTICSEARCH_URL/dataassets --type=data
 echo 'Done adding data to index: DataAssets'
@@ -28,3 +32,7 @@ echo 'Done adding data to index: DataAssets'
 echo 'Adding data to index: Related'
 elasticdump --input=/data/related-data.json --output=$ELASTICSEARCH_URL/related --type=data
 echo 'Done adding data to index: Related'
+
+echo 'Adding data to index: Metrics'
+elasticdump --input=/data/metrics-data.json --output=$ELASTICSEARCH_URL/metrics --type=data
+echo 'Done adding data to index: Metrics'
