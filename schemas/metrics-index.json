@@ -1,0 +1,50 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "lowercase_keyword": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    },
+    "index": {
+      "max_ngram_diff": 6
+    }
+  },
+  "mappings": {
+    "properties": {
+      "timestamp": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis"
+      },
+      "granularity": {
+        "type": "text",
+        "analyzer": "lowercase_keyword"
+      },
+      "dhId": {
+        "type": "text",
+        "analyzer": "lowercase_keyword"
+      },
+      "dhSourceName": {
+        "type": "text",
+        "analyzer": "lowercase_keyword"
+      },
+      "userSegment": {
+        "type": "text",
+        "analyzer": "lowercase_keyword"
+      },
+      "accessType": {
+        "type": "text",
+        "analyzer": "lowercase_keyword"
+      },
+      "count": {
+        "type": "integer"
+      }
+    }
+  }
+}
+
